@@ -3,6 +3,11 @@ public class User {
     private String phone;
     private String name;
 
+
+    public User(){
+
+    }
+
     public User(String phone, String name) {
         this.phone = phone;
         this.name = name;
