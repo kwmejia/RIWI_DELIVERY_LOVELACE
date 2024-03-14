@@ -63,3 +63,5 @@ S
 #src/controller/OrderController.java,3/1/310073a474c0c517aea5b1a490dd93c26aee7118
 I
 src/entities/Product.java,0/c/0c70f37f3ff81cc6d712379df2f6d0e981f4122b
+K
+src/entities/TakeOrder.java,5/9/599f87e708b00c3dd736ff072f28e0c83469a4a9
