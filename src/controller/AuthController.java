@@ -27,12 +27,12 @@ public class AuthController
 
         if (users.contains(newAccount))
         {
-            System.out.println("El usuario ya existe. Por favor, intente con otro nombre de usuario.");
+            JOptionPane.showMessageDialog("El usuario ya existe. Por favor, intente con otro nombre de usuario.");
         }
         else
         {
             users.add(newAccount);
-            System.out.println("Registro exitoso.");
+            JOptionPane.showMessageDialog("Registro exitoso.");
         }
     }
 
@@ -55,13 +55,13 @@ public class AuthController
         {
             currentUser = user.getEmail();
             currentRole = user.getRole();
-            System.out.println("Inicio de sesión exitoso. Bienvenido, " + currentUser + "!");
+            JOptionPane.showMessageDialog("Inicio de sesión exitoso. Bienvenido, " + currentUser + "!");
 
             interfaz();
         }
         else
         {
-            System.out.println("Nombre de usuario o contraseña incorrectos.");
+            JOptionPane.showMessageDialog("Nombre de usuario o contraseña incorrectos.");
         }
     }
 
