@@ -5,6 +5,7 @@ public class Account {
     private String email;
     private String password;
 
+    private Rol rol;
     public Account(int id, String email, String password, int rol) {
         this.id = id;
         this.email = email;
