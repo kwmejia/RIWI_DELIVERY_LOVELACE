@@ -73,13 +73,13 @@ public class Order {
 
         @Override
         public String toString() {
-                return "Order{" +
-                        "id=" + id +
-                        ", date='" + date + '\'' +
-                        ", time='" + time + '\'' +
-                        ", payMethod=" + payMethod +
-                        ", totalPrice=" + totalPrice +
-                        ", status=" + status +
-                        '}';
+                return
+                        "id = " + id + "\n" +
+                        "date = " + date + '\n' +
+                        "time ='" + time + '\n' +
+                        "payMethod =" + payMethod + '\n' +
+                        "totalPrice =" + totalPrice + '\n' +
+                        "status = " + status
+                        ;
         }
 }

@@ -1,6 +1,9 @@
 package controller;
 
 import java.util.ArrayList;
+import entities.Order;
+
+import javax.swing.*;
 
 public class OrderController {
 
@@ -23,5 +26,16 @@ public class OrderController {
         return "OrderController{" +
                 "listOrder=" + listOrder +
                 '}';
+    }
+
+    public void listarOrdenes (){
+        if (listOrder.isEmpty()){
+            JOptionPane.showMessageDialog(null,"No hay ordenes para mostrar");
+        }else{
+            for (Order temporal : listOrder){
+                JOptionPane.showMessageDialog(null,temporal.toString());
+            }
+
+        }
     }
 }
