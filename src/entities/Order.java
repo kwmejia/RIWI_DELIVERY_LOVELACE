@@ -1,5 +1,7 @@
 package entities;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Order {
@@ -7,8 +9,8 @@ public class Order {
         private DeliveryMan deliveryMan;
         private int id;
         private ArrayList<Product> product;
-        private String date;
-        private String time;
+        private LocalDate date;
+        private LocalTime time;
         private PayMethod payMethod;
         private double totalPrice;
         private boolean status;
@@ -16,20 +18,31 @@ public class Order {
         public Order() {
         }
 
-        public Order(int id, String date, String time, PayMethod payMethod, double totalPrice, boolean status) {
+        public Order(int id, PayMethod payMethod, double totalPrice, boolean status,Client client ) {
                 this.id = id;
-                this.date = date;
-                this.time = time;
+                this.date = LocalDate.now();
+                this.time = LocalTime.now();
                 this.payMethod = payMethod;
                 this.totalPrice = totalPrice;
                 this.status = status;
-
                 //Se crea cliente
-                this.client = new Client();
-
+                this.client = client;
                 //Se crea producto
                 this.product = new ArrayList<Product>();
         }
+        public Order(int id,  PayMethod payMethod, double totalPrice, boolean status,Client client , DeliveryMan deliveryMan) {
+                this.id = id;
+                this.date = LocalDate.now();
+                this.time = LocalTime.now();
+                this.payMethod = payMethod;
+                this.totalPrice = totalPrice;
+                this.status = status;
+                this.deliveryMan = deliveryMan;
+                this.client = client;
+                //Se crea producto
+                this.product = new ArrayList<Product>();
+        }
+
 
         public int getId() {
                 return id;
