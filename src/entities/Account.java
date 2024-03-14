@@ -4,13 +4,11 @@ public class Account {
     private int id;
     private String email;
     private String password;
-    private int rol;
 
     public Account(int id, String email, String password, int rol) {
         this.id = id;
         this.email = email;
         this.password = password;
-        this.rol = rol;
     }
 
     public int getId() {
@@ -37,13 +35,6 @@ public class Account {
         this.password = password;
     }
 
-    public int getRol() {
-        return rol;
-    }
-
-    public void setRol(int rol) {
-        this.rol = rol;
-    }
 
     @Override
     public String toString() {
@@ -51,7 +42,6 @@ public class Account {
                 "id=" + id +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", rol=" + rol +
                 '}';
     }
 }
