@@ -1,3 +1,5 @@
+package entities;
+
 public class User {
 
     private String phone;
@@ -31,7 +33,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "entities.User{" +
                 "phone='" + phone + '\'' +
                 ", name='" + name + '\'' +
                 '}';
