@@ -1,7 +1,10 @@
 package controller;
 
 import java.util.ArrayList;
+
+import entities.Client;
 import entities.Order;
+import entities.User;
 
 import javax.swing.*;
 
@@ -43,5 +46,25 @@ public class OrderController {
             }
             JOptionPane.showMessageDialog(null,text);
         }
+    }
+
+
+    //Method List Pending Order
+    public void listPendingOrder(Client client){
+
+        String orderPending = "";
+        for(Order orden : this.listOrder){
+
+            //check that the client match
+            if(orden.getClient().getId() == client.getId()){
+                if (orden.getDeliveryMan() == null){
+                    orderPending.concat(orden.toString()+"\n");
+                }
+
+            }
+
+        }
+        JOptionPane.showMessageDialog(null, orderPending);
+
     }
 }
