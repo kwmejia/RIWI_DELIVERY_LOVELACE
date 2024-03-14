@@ -11,6 +11,9 @@ public class Order {
         private double totalPrice;
         private boolean status;
 
+        public Order() {
+        }
+
         public Order(int id, String date, String time, PayMethod payMethod, double totalPrice, boolean status) {
                 this.id = id;
                 this.date = date;
