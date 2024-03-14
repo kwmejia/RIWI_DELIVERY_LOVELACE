@@ -1,19 +1,14 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-
 
 
 public class Client extends User{
     private String address;
 
-    public Client (){
-
-    }
-
-    private Client(String address, String phone, String name) {
-
-        super(phone, nombre);
+    public Client(int id, String email, String password, int rol, String phone, String name, ArrayList<Order> historyOrders, String address) {
+        super(id, email, password, rol, phone, name, historyOrders);
         this.address = address;
     }
 
@@ -25,11 +20,9 @@ public class Client extends User{
         this.address = address;
     }
 
-
     @Override
     public String toString() {
-        return super.toString +
-                "address='" + address + '\'' +
-                '}';
+        return super.toString()+
+                "address='" + address + "\n";
     }
 }
