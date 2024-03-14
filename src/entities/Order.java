@@ -43,6 +43,45 @@ public class Order {
                 this.product = new ArrayList<Product>();
         }
 
+        public Client getClient() {
+                return client;
+        }
+
+        public void setClient(Client client) {
+                this.client = client;
+        }
+
+        public DeliveryMan getDeliveryMan() {
+                return deliveryMan;
+        }
+
+        public void setDeliveryMan(DeliveryMan deliveryMan) {
+                this.deliveryMan = deliveryMan;
+        }
+
+        public ArrayList<Product> getProduct() {
+                return product;
+        }
+
+        public void setProduct(ArrayList<Product> product) {
+                this.product = product;
+        }
+
+        public LocalDate getDate() {
+                return date;
+        }
+
+        public void setDate(LocalDate date) {
+                this.date = date;
+        }
+
+        public LocalTime getTime() {
+                return time;
+        }
+
+        public void setTime(LocalTime time) {
+                this.time = time;
+        }
 
         public int getId() {
                 return id;
