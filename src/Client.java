@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+
+public class Client {
+    private String address;
+
+
+    public Client (){
+
+    }
+
+    private Client(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "address='" + address + '\'' +
+                '}';
+    }
+}
