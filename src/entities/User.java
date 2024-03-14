@@ -1,16 +1,12 @@
 package entities;
 
-public class User {
+public class User extends Account {
 
     private String phone;
     private String name;
 
-
-    public User(){
-
-    }
-
-    public User(String phone, String name) {
+    public User(int id, String email, String password, int rol, String phone, String name) {
+        super(id, email, password, rol);
         this.phone = phone;
         this.name = name;
     }
