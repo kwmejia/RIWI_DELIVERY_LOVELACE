@@ -32,10 +32,16 @@ public class OrderController {
         if (listOrder.isEmpty()){
             JOptionPane.showMessageDialog(null,"No hay ordenes para mostrar");
         }else{
+            String text ="";
             for (Order temporal : listOrder){
-                JOptionPane.showMessageDialog(null,temporal.toString());
+                text += "id = " + temporal.getId() + "\n" +
+                        "date = " + temporal.getDate() + '\n' +
+                        "time ='" + temporal.getTime() + '\n' +
+                        "payMethod =" + temporal.getPayMethod() + '\n' +
+                        "totalPrice =" + temporal.getTotalPrice() + '\n' +
+                        "status = " + temporal.isStatus() + "\n";
             }
-
+            JOptionPane.showMessageDialog(null,text);
         }
     }
 }
