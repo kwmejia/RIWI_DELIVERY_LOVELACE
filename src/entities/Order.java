@@ -1,10 +1,12 @@
 package entities;
 
+import java.util.ArrayList;
+
 public class Order {
 //      private Client client;
-//      private DeliveryMan deliveryMan;
+        private DeliveryMan deliveryMan;
         private int id;
-//      private Product[] product;
+        private ArrayList<Product> product;
         private String date;
         private String time;
         private PayMethod payMethod;
