@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 
 
-public class Client {
+public class Client extends User{
     private String address;
-
 
     public Client (){
 
     }
 
-    private Client(String address) {
+    private Client(String address, String phone, String name) {
+
+        super(phone, nombre);
         this.address = address;
     }
 
@@ -25,7 +26,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return super.toString +
                 "address='" + address + '\'' +
                 '}';
     }
