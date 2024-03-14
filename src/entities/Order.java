@@ -3,7 +3,7 @@ package entities;
 import java.util.ArrayList;
 
 public class Order {
-//      private Client client;
+        private Client client;
         private DeliveryMan deliveryMan;
         private int id;
         private ArrayList<Product> product;
@@ -23,6 +23,12 @@ public class Order {
                 this.payMethod = payMethod;
                 this.totalPrice = totalPrice;
                 this.status = status;
+
+                //Se crea cliente
+                this.client = new Client();
+
+                //Se crea producto
+                this.product = new ArrayList<Product>();
         }
 
         public int getId() {
