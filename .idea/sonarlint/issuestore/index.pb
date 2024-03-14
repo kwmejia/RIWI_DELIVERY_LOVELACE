@@ -67,3 +67,11 @@ K
 src/entities/TakeOrder.java,5/9/599f87e708b00c3dd736ff072f28e0c83469a4a9
 Y
 )src/controller/DeliveryManController.java,f/e/feda81564124e66605690a9838d3c394193a51c7
+F
+src/entities/User.java,6/2/62acf9bec13af858a100895fa8370d078ff49eeb
+I
+src/entities/Account.java,0/d/0d9cbb222a89b564042ffdacb1c918a6a84878b1
+H
+src/entities/Client.java,c/6/c6f6d6049739565bd96ee9fed8f208fe70b37b06
+E
+src/entities/Rol.java,9/0/90164d66d412c1e3048f414ca3083347c3a6d8f4

@@ -11,6 +11,14 @@ public class User extends Account {
         this.name = name;
     }
 
+    public User(String phone, String name) {
+        this.phone = phone;
+        this.name = name;
+    }
+
+    public User() {
+    }
+
     public String getPhone() {
         return phone;
     }
