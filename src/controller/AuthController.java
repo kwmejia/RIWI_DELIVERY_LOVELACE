@@ -4,18 +4,15 @@ import javax.swing.JOptionPane;
 
 public class AuthController
 {
-    private ArrayList<String> users;
+    private ArrayList<Account> users;
     private ArrayList<String> passwords;
-    private ArrayList<String> roles;
     private String currentUser;
-    private String password;
     private String currentRole;
 
     public AuthController()
     {
         users = new ArrayList<>();
         passwords = new ArrayList<>();
-        roles = new ArrayList<>();
         this.currentUser = null;
         this.currentRole = null;
     }
@@ -24,19 +21,18 @@ public class AuthController
     {
         String emailRegister = JOptionPane.showInputDialog("Ingrese el email a registrar");
         String passwordRegister = JOptionPane.showInputDialog("Ingrese la contraseña");
-        String rol = JOptionPane.showInputDialog("Ingrese su Rol 'Cliente' O 'Delivery' ");
+        int id = Integer.parseInt(JOptionPane.showInputDialog("Ingresa tu identificacion"));
 
-        if (users.contains(emailRegister))
+        Account newAccount = new Account(emailRegister, passwordRegister, id);
+
+        if (users.contains(newAccount))
         {
-            JOptionPane.showMessageDialog(null, "El usuario ya esta registrado");
+            System.out.println("El usuario ya existe. Por favor, intente con otro nombre de usuario.");
         }
         else
         {
-            users.add(emailRegister);
-            passwords.add(passwordRegister);
-            roles.add(rol);
-
-            JOptionPane.showMessageDialog(null, "Registro exitoso!");
+            users.add(newAccount);
+            System.out.println("Registro exitoso.");
         }
     }
 
@@ -45,28 +41,35 @@ public class AuthController
         String emailLogin = JOptionPane.showInputDialog("Ingrese su email registrado ");
         String passwordLogin = JOptionPane.showInputDialog("Ingrese su contraseña");
 
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).equals(emailLogin) && passwords.get(i).equals(passwordLogin))
+        Account user = null;
+        for (Account account : this.users)
+        {
+            if (account.getEmail().equalsIgnoreCase(emailLogin) && account.getPassword().equals(passwordLogin))
             {
-                currentUser = emailLogin;
-                currentRole = roles.get(i);
-
-                System.out.println("Inicio de sesión exitoso. Bienvenido, " + emailLogin + "!");
-
-                interfaz();
-                return;
+                user = account;
+                break;
             }
         }
 
-        JOptionPane.showMessageDialog(null,"Email o Contraseña incorrecta!");
+        if (user != null)
+        {
+            currentUser = user.getEmail();
+            currentRole = user.getRole();
+            System.out.println("Inicio de sesión exitoso. Bienvenido, " + currentUser + "!");
 
+            interfaz();
+        }
+        else
+        {
+            System.out.println("Nombre de usuario o contraseña incorrectos.");
+        }
     }
 
     public void logOut()
     {
         currentUser = null;
         currentRole = null;
-         JOptionPane.showMessageDialog(null,"Sesion cerrada correctamente");
+        JOptionPane.showMessageDialog(null,"Sesion cerrada correctamente");
     }
 
     public void interfaz()
