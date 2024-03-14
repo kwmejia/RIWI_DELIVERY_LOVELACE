@@ -1,9 +1,9 @@
 
 ¡
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8Þ«Ùïã1J$2fbce0a6-d744-4149-83f1-8a65b8d12ffb
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8Þ«Ùïã1J$84c26746-dd88-443b-b104-b66203aceb7e
 ¡
-java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8ß«Ùïã1J$70a97bef-d079-41a8-8890-c5d5df2cd2e8
-
-java:S1319>"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹Ú²Ý8ôöæïã1
-‰
-java:S1319B"gThe type of "product" should be an interface such as "List" rather than the implementation "ArrayList".(ŠÓ´Üúÿÿÿÿ8ööæïã1
+java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8ß«Ùïã1J$5925c735-d6b2-4e4c-9498-0278d28f8015
+³
+java:S1319>"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹Ú²Ý8ôöæïã1J$98233fae-765f-4718-b593-fa82c86429c6
+¯
+java:S1319B"gThe type of "product" should be an interface such as "List" rather than the implementation "ArrayList".(ŠÓ´Üúÿÿÿÿ8ööæïã1J$fe2b23d4-1fa1-432a-be6c-e4d07a2b8a9b
