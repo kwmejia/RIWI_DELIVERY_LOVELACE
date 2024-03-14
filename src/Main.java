@@ -1,6 +1,4 @@
 
-
-
 import javax.swing.*;
 
 public class Main {
@@ -32,13 +30,6 @@ public class Main {
             }
 
         } while (!opcion.equals("3"));
-
-
-
-
-
-
-
 
 
     }
