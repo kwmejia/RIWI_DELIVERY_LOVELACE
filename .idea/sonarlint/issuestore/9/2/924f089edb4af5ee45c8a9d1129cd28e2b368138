@@ -1,8 +1,8 @@
 
-
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(°€ΰβ8ήΛΎογ1J$3b591b5f-7b44-4503-b78e-ea894c92beb9
+h
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(°€ΰβ8Ξÿαογ1
 ]
-java:S1220""Move this file to a named package.8αΛΎογ1J$74b0dc2b-1e1b-428e-be72-52f8c1cb539e
-‹
-java:S1871"HThis case's code block is the same as the block for the case on line 23.(ηΏΤ8ΜΎογ1J$b6b02079-4eab-435b-9148-459730fef834
-d	java:S131""Add a default case to this switch.(°€ΰβ8ΜΎογ1J$ecc19644-76e4-40ac-99bd-d3ff6ff7c451
+java:S1220""Move this file to a named package.8αΛΎογ1J$e98587d0-fe1c-4591-8a1b-68e7ddb4021d
+e
+java:S1871"HThis case's code block is the same as the block for the case on line 23.(ηΏΤ8Ό€βογ1
+>	java:S131""Add a default case to this switch.(°€ΰβ8Ώ€βογ1

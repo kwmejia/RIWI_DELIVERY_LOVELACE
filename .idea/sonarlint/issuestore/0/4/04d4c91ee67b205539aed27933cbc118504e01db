@@ -1,11 +1,9 @@
 
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8Ş«Ùïã1
-{
-java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8ß«Ùïã1
-L
-java:S1068"*Remove this unused "client" private field.(‚Ø–øùÿÿÿÿ8¬Ùïã1
-L
-java:S1068	"/Remove this unused "deliveryMan" private field.(Ş’–8¬Ùïã1
-M
-java:S1068"+Remove this unused "product" private field.(’à¸×ûÿÿÿÿ8¬Ùïã1
+¡
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8Ş«Ùïã1J$2fbce0a6-d744-4149-83f1-8a65b8d12ffb
+¡
+java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÚßŠ’ÿÿÿÿÿ8ß«Ùïã1J$70a97bef-d079-41a8-8890-c5d5df2cd2e8
+
+java:S1319>"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹Ú²İ8ôöæïã1
+‰
+java:S1319B"gThe type of "product" should be an interface such as "List" rather than the implementation "ArrayList".(ŠÓ´Üúÿÿÿÿ8ööæïã1
