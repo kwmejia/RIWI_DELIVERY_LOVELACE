@@ -1,3 +1,5 @@
+package entities;
+
 public class Product {
     private static int id;
     private double price;
