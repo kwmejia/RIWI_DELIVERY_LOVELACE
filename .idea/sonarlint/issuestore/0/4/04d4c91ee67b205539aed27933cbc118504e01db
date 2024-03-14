@@ -1,3 +1,11 @@
 
-|	java:S125"<This block of commented-out lines of code should be removed.(ρ·ΗϋÿÿÿÿJ$8dcd879b-c2d3-46c4-a80d-f2f19f90b758
-w	java:S125"<This block of commented-out lines of code should be removed.(»ƒσΡJ$3f64fe39-71ae-4728-98d9-798d791e29ce
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊί’ÿÿÿÿÿ8φμογ1
+{
+java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ϊί’ÿÿÿÿÿ8ωμογ1
+L
+java:S1068"*Remove this unused "client" private field.(‚Ψ–ψωÿÿÿÿ8¬νογ1
+L
+java:S1068	"/Remove this unused "deliveryMan" private field.(ή’–8¬νογ1
+M
+java:S1068"+Remove this unused "product" private field.(’ΰΈΧϋÿÿÿÿ8­νογ1
