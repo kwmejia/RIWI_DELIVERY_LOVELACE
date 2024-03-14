@@ -57,3 +57,9 @@ G.idea/sonarlint/issuestore/4/e/4e5f379002316d16fb0aa3c34aef22269f642865,3/b/3b
 Q.idea/sonarlint/securityhotspotstore/9/c/9cd180b2e893bb3a1c892039714fd7f4ccd9cc48,a/b/abcb8831e871915afb526a0642ec921849767bd5
 Å
 Q.idea/sonarlint/securityhotspotstore/9/c/9c27d43556258bdbb1b76555b172bfaf06253d8f,d/3/d3bb86fcce22ddb84aac062babdc85cb32b63960
+Q
+!src/entities/OrderController.java,a/e/ae3c80363d40a52f1644c62fc0c646d812bfe2fb
+S
+#src/controller/OrderController.java,3/1/310073a474c0c517aea5b1a490dd93c26aee7118
+I
+src/entities/Product.java,0/c/0c70f37f3ff81cc6d712379df2f6d0e981f4122b
