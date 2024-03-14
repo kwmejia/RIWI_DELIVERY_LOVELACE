@@ -36,3 +36,4 @@ Las contribuciones son lo que hacen a la comunidad de código abierto un lugar i
 
 ## Licencia
 Distribuido bajo la Licencia RIWI.
+![Texto Alternativo](https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png)
