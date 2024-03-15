@@ -2,7 +2,13 @@ package controller;
 
 import java.util.ArrayList;
 
+
 import entities.*;
+
+import entities.Order;
+import entities.User;
+
+
 
 import javax.swing.*;
 
@@ -121,5 +127,32 @@ public class OrderController {
 
         boolean addCorrect = this.listOrder.add(orden);
         JOptionPane.showMessageDialog(null, addCorrect ? "Orden registrada correctamente " : "No se pudo guardar la orden");
+    }
+
+    public void closeOrder (User user){
+        if (listOrder.isEmpty()){
+            JOptionPane.showMessageDialog(null,"No hay ordenes para cerrar");
+        }else{
+            this.listarOrdenes();
+            String codigo = JOptionPane.showInputDialog("Ingresa el ID de la order que deseas cerrar");
+            Order orderClosed = searchById(codigo);
+            if(orderClosed!=null){
+                orderClosed.setStatus(false);
+                listOrder.removeIf(order -> order.getId()==Integer.parseInt(codigo));
+                user.addHistoryOrders(orderClosed);
+                JOptionPane.showMessageDialog(null,"Pedido cerrado correctamente");
+            }else{
+                JOptionPane.showMessageDialog(null,"No se puedo cerrar el pedido");
+            }
+        }
+    }
+
+    public Order searchById(String codigoBuscar){
+        for (Order temporal : this.listOrder){
+            if (temporal.getId() == Integer.parseInt(codigoBuscar)){
+                return temporal;
+            }
+        }
+        return  null;
     }
 }
