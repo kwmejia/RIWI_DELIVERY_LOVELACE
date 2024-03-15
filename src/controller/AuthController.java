@@ -1,63 +1,103 @@
+package controller;
+
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
+import entities.Client;
+import entities.DeliveryMan;
+import entities.Account;
 
 public class AuthController
 {
-    private ArrayList<Account> users;
-    private ArrayList<String> passwords;
-    private String currentUser;
-    private String currentRole;
+    private ArrayList<Client> clients;
+    private ArrayList<DeliveryMan> deliveryMans;
 
     public AuthController()
     {
-        users = new ArrayList<>();
-        passwords = new ArrayList<>();
-        this.currentUser = null;
-        this.currentRole = null;
+        clients = new ArrayList<>();
+        deliveryMans = new ArrayList<>();
     }
 
     public void register()
     {
-        String emailRegister = JOptionPane.showInputDialog("Ingrese el email a registrar");
-        String passwordRegister = JOptionPane.showInputDialog("Ingrese la contraseña");
-        int id = Integer.parseInt(JOptionPane.showInputDialog("Ingresa tu identificacion"));
+        int typeUser =  Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de usuario ( Delivery: 1 / Client: 2)"));
+        int id = 0;
 
-        Account newAccount = new Account(emailRegister, passwordRegister, id);
-
-        if (users.contains(newAccount))
+        if (typeUser == 1)
         {
-            JOptionPane.showMessageDialog(null,"El usuario ya existe. Por favor, intente con otro nombre de usuario.");
+
+            String emailRegister = JOptionPane.showInputDialog("Ingrese el email a registrar");
+            String passwordRegister = JOptionPane.showInputDialog("Ingrese la contraseña");
+
+            String name = JOptionPane.showInputDialog("Ingrese su nombre");
+            double document = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su documento"));
+            String phoneNumber = JOptionPane.showInputDialog("Ingrese su telefono");
+
+            String vehicleType = JOptionPane.showInputDialog("Que tipo de vehiculo manejará?");
+            String vehiclePlate = JOptionPane.showInputDialog("Que tipo de vehiculo manejará?");
+
+            boolean status = true;
+            id++;
+
+            DeliveryMan deliveryMan = new DeliveryMan(vehicleType, vehiclePlate, id, emailRegister, passwordRegister, typeUser, phoneNumber, name, document, status);
+            deliveryMans.add(deliveryMan);
+
+            JOptionPane.showMessageDialog(null,"REGISTRO EXITOSO DEL DELIVERY!!");
         }
-        else
+
+        if (typeUser == 2)
         {
-            users.add(newAccount);
-            JOptionPane.showMessageDialog(null,"Registro exitoso.");
+            String emailRegister = JOptionPane.showInputDialog("Ingrese el email a registrar");
+            String passwordRegister = JOptionPane.showInputDialog("Ingrese la contraseña");
+
+            String name = JOptionPane.showInputDialog("Ingrese su nombre");
+            String phoneNumber = JOptionPane.showInputDialog("Ingrese su telefono");
+            String address = JOptionPane.showInputDialog("Ingrese su direccion");
+
+            id++;
+
+            Client client = new Client(id, emailRegister, passwordRegister, typeUser, phoneNumber, name, address);
+            clients.add(client);
+
+            JOptionPane.showMessageDialog(null,"REGISTRO EXITOSO DEL CLIENTE!!");
         }
     }
 
     public void login()
     {
-        String emailLogin = JOptionPane.showInputDialog("Ingrese su email registrado ");
-        String passwordLogin = JOptionPane.showInputDialog("Ingrese su contraseña");
+        int typeUser =  Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de usuario ( Delivery: 1 / Client: 2)"));
 
-        Account user = null;
-        for (Account account : this.users)
+        if (typeUser == 1)
         {
-            if (account.getEmail().equalsIgnoreCase(emailLogin) && account.getPassword().equals(passwordLogin))
+            String emailLogin = JOptionPane.showInputDialog("Ingrese su email registrado ");
+            String passwordLogin = JOptionPane.showInputDialog("Ingrese su contraseña");
+
+            for (DeliveryMan account : this.deliveryMans)
             {
-                user = account;
-                break;
+                if (account.getEmail().equalsIgnoreCase(emailLogin) && account.getPassword().equals(passwordLogin))
+                {
+                    JOptionPane.showMessageDialog(null,"Inicio de sesion exitoso");
+
+                    interfaz(typeUser);
+                    break;
+                }
             }
         }
-
-        if (user != null)
+        else if (typeUser == 2)
         {
-            currentUser = user.getEmail();
-            currentRole = user.getRole();
-            JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso. Bienvenido, " + currentUser + "!");
+            String emailLogin = JOptionPane.showInputDialog("Ingrese su email registrado ");
+            String passwordLogin = JOptionPane.showInputDialog("Ingrese su contraseña");
 
-            interfaz();
+            for (Client account : this.clients)
+            {
+                if (account.getEmail().equalsIgnoreCase(emailLogin) && account.getPassword().equals(passwordLogin))
+                {
+                    JOptionPane.showMessageDialog(null,"Inicio de sesion exitoso");
+
+                    interfaz(typeUser);
+                    break;
+                }
+            }
         }
         else
         {
@@ -65,22 +105,34 @@ public class AuthController
         }
     }
 
-    public void logOut()
+    public boolean logOut()
     {
-        currentUser = null;
-        currentRole = null;
-        JOptionPane.showMessageDialog(null,"Sesion cerrada correctamente");
+        //False para cancelar ciclos de menus o interfaces
+        JOptionPane.showMessageDialog(null, "Sesion cerrada correctamente");
+        return false;
+
     }
 
-    public void interfaz()
+    public void interfaz(int role)
     {
-        if (currentRole.equalsIgnoreCase("cliente"))
+        if (role == 1)
         {
-             JOptionPane.showMessageDialog(null,"Interfaz para clientes");
+            JOptionPane.showMessageDialog(null,"Interfaz para clientes...");
+
+            //Retorna un false para utilizar saber si se sigue mostrando el menu correspondiente o no, terminar un ciclo de la interfaz
+            logOut();
         }
-        else if (currentRole.equalsIgnoreCase("delivery"))
+        else if (role == 2)
         {
-             JOptionPane.showMessageDialog(null,"Interfaz para delivery...");
+            JOptionPane.showMessageDialog(null,"Interfaz para delivery...");
+
+            //Retorna un false para utilizar saber si se sigue mostrando el menu correspondiente o no, terminar un ciclo de la interfaz
+            logOut();
+
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Error en el tipo de rol");
         }
     }
 }
