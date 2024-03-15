@@ -1,4 +1,8 @@
 
-V
-java:S1220""Move this file to a named package.J$0074d72e-0a30-4db2-9762-1e7187280a26
-k	java:S106"+Replace this use of System.out by a logger.(¿í´öıÿÿÿÿJ$405ede7a-89ac-42b1-92b7-35083f17c223
+
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(°€àâ8Îÿáïã1J$b5bcddff-318f-41c3-be2c-f9823860963a
+]
+java:S1220""Move this file to a named package.8áË¾ïã1J$bb1d0ebd-8d44-4d1b-a457-f2a50ac10126
+‹
+java:S1871"HThis case's code block is the same as the block for the case on line 23.(ç¿Ô8¼€âïã1J$52184698-7527-4d87-afbb-9edb724977fc
+d	java:S131""Add a default case to this switch.(°€àâ8¿€âïã1J$c1af7797-423d-481b-9379-b51abc268843

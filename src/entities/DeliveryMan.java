@@ -1,25 +1,25 @@
 package entities;
 
-public class DeliveryMan {
+public class DeliveryMan extends User{
     private String vehicle;
     private String plate;
     private double document;
     private boolean status;
 
-    //Constructor vacion
-    public DeliveryMan(){
-        this.vehicle = "";
-        this.plate = "";
-        this.document = 0;
-        this.status = false;
+    //Constructor vacio
+    public DeliveryMan() {
     }
-    //Constructor con parametros
-    public DeliveryMan(String vehicle, String plate, double document, boolean status){
+
+    //Constructor con parametros heredando de USER
+    public DeliveryMan(String vehicle, String plate, int id, String email, String password, int rol, String phone, String name, double document, boolean status) {
+        super(id, email, password, rol, phone, name);
         this.vehicle = vehicle;
         this.plate = plate;
         this.document = document;
         this.status = status;
     }
+
+
     //Metodos getters y setters
 
     public String getVehicle() {

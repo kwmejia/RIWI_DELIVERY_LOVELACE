@@ -1,16 +1,22 @@
-public class User {
+package entities;
+
+public class User extends Account {
 
     private String phone;
     private String name;
 
-
-    public User(){
-
+    public User(int id, String email, String password, int rol, String phone, String name) {
+        super(id, email, password, rol);
+        this.phone = phone;
+        this.name = name;
     }
 
     public User(String phone, String name) {
         this.phone = phone;
         this.name = name;
+    }
+
+    public User() {
     }
 
     public String getPhone() {
@@ -31,7 +37,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "entities.User{" +
                 "phone='" + phone + '\'' +
                 ", name='" + name + '\'' +
                 '}';

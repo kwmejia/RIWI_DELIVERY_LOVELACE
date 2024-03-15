@@ -1,5 +1,6 @@
 import javax.swing.*;
 public class Main {
+
     public static void main(String[] args) {
         // iniciar sesion
         //Registrarse
@@ -28,13 +29,6 @@ public class Main {
             }
 
         } while (!opcion.equals("3"));
-
-
-
-
-
-
-
 
 
     }

@@ -1,21 +1,24 @@
+package entities;
+
 public class Product {
-    private static int id;
+    private int id;
     private double price;
     private String name;
     private String category;
 
-    public Product(double price, String name, String category) {
+    public Product(int id, double price, String name, String category) {
+        this.id = id;
         this.price = price;
         this.name = name;
         this.category = category;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Product.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public double getPrice() {
