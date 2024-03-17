@@ -63,7 +63,7 @@ public class AuthController
         }
     }
 
-    public void login()
+    public boolean login()
     {
         int typeUser =  Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de usuario ( Delivery: 1 / Client: 2)"));
 
@@ -78,8 +78,9 @@ public class AuthController
                 {
                     JOptionPane.showMessageDialog(null,"Inicio de sesion exitoso");
 
-                    interfaz(typeUser);
-                    break;
+                    return true;
+                    //interfaz(typeUser);
+                    //break;
                 }
             }
         }
@@ -94,15 +95,16 @@ public class AuthController
                 {
                     JOptionPane.showMessageDialog(null,"Inicio de sesion exitoso");
 
-                    interfaz(typeUser);
-                    break;
+                    return true;
+                    //interfaz(typeUser);
+                    //break;
                 }
             }
         }
-        else
+        /*else
         {
             JOptionPane.showMessageDialog(null,"Nombre de usuario o contraseña incorrectos.");
-        }
+        }*/
     }
 
     public boolean logOut()
@@ -113,7 +115,7 @@ public class AuthController
 
     }
 
-    public void interfaz(int role)
+    /*public void interfaz(int role)
     {
         if (role == 1)
         {
@@ -134,5 +136,5 @@ public class AuthController
         {
             JOptionPane.showMessageDialog(null,"Error en el tipo de rol");
         }
-    }
+    }*/
 }
