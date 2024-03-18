@@ -12,9 +12,12 @@ public class Account {
         this.password = password;
     }
 
+<<<<<<< HEAD
+=======
     public Account() {
     }
 
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
     public int getId() {
         return id;
     }
@@ -49,5 +52,8 @@ public class Account {
                 '}';
     }
 }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc

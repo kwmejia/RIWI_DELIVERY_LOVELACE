@@ -1,14 +1,24 @@
 package entities;
 
+<<<<<<< HEAD
+public class User {
+=======
 public class User extends Account {
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
 
     private String phone;
     private String name;
 
+<<<<<<< HEAD
+
+    public User(){
+
+=======
     public User(int id, String email, String password, int rol, String phone, String name) {
         super(id, email, password, rol);
         this.phone = phone;
         this.name = name;
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
     }
 
     public User(String phone, String name) {
@@ -16,9 +26,12 @@ public class User extends Account {
         this.name = name;
     }
 
+<<<<<<< HEAD
+=======
     public User() {
     }
 
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
     public String getPhone() {
         return phone;
     }

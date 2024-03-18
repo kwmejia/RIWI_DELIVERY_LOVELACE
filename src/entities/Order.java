@@ -1,5 +1,14 @@
 package entities;
 
+<<<<<<< HEAD
+public class Order {
+//      private Client client;
+//      private DeliveryMan deliveryMan;
+        private int id;
+//      private Product[] product;
+        private String date;
+        private String time;
+=======
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -11,6 +20,7 @@ public class Order {
         private ArrayList<Product> product;
         private LocalDate date;
         private LocalTime time;
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
         private PayMethod payMethod;
         private double totalPrice;
         private boolean status;
@@ -18,6 +28,15 @@ public class Order {
         public Order() {
         }
 
+<<<<<<< HEAD
+        public Order(int id, String date, String time, PayMethod payMethod, double totalPrice, boolean status) {
+                this.id = id;
+                this.date = date;
+                this.time = time;
+                this.payMethod = payMethod;
+                this.totalPrice = totalPrice;
+                this.status = status;
+=======
         public Order(int id, PayMethod payMethod, double totalPrice, boolean status,Client client ) {
                 this.id = id;
                 this.date = LocalDate.now();
@@ -81,6 +100,7 @@ public class Order {
 
         public void setTime(LocalTime time) {
                 this.time = time;
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
         }
 
         public int getId() {
@@ -91,6 +111,25 @@ public class Order {
                 this.id = id;
         }
 
+<<<<<<< HEAD
+        public String getDate() {
+                return date;
+        }
+
+        public void setDate(String date) {
+                this.date = date;
+        }
+
+        public String getTime() {
+                return time;
+        }
+
+        public void setTime(String time) {
+                this.time = time;
+        }
+
+=======
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
         public PayMethod getPayMethod() {
                 return payMethod;
         }
@@ -117,6 +156,16 @@ public class Order {
 
         @Override
         public String toString() {
+<<<<<<< HEAD
+                return "Order{" +
+                        "id=" + id +
+                        ", date='" + date + '\'' +
+                        ", time='" + time + '\'' +
+                        ", payMethod=" + payMethod +
+                        ", totalPrice=" + totalPrice +
+                        ", status=" + status +
+                        '}';
+=======
                 return
                         "id = " + id + "\n" +
                         "date = " + date + '\n' +
@@ -125,5 +174,6 @@ public class Order {
                         "totalPrice =" + totalPrice + '\n' +
                         "status = " + status
                         ;
+>>>>>>> 656cdd43620f8b39527138805d9918ef13ac3fdc
         }
 }
