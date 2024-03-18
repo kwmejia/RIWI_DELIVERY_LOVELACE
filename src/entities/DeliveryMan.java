@@ -6,17 +6,13 @@ public class DeliveryMan extends User{
     private double document;
     private boolean status;
 
-    //Constructor vacion
-    public DeliveryMan(){
-        this.vehicle = "";
-        this.plate = "";
-        this.document = 0;
-        this.status = false;
+    //Constructor vacio
+    public DeliveryMan() {
     }
 
     //Constructor con parametros heredando de USER
-    public DeliveryMan(String phone, String name, String vehicle, String plate, double document, boolean status) {
-        super(phone, name);
+    public DeliveryMan(String vehicle, String plate, int id, String email, String password, int rol, String phone, String name, double document, boolean status) {
+        super(id, email, password, rol, phone, name);
         this.vehicle = vehicle;
         this.plate = plate;
         this.document = document;

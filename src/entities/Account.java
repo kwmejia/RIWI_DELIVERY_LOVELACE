@@ -12,6 +12,9 @@ public class Account {
         this.password = password;
     }
 
+    public Account() {
+    }
+
     public int getId() {
         return id;
     }
@@ -46,3 +49,5 @@ public class Account {
                 '}';
     }
 }
+
+
